@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import './ProductCart.css'
+import React, { useState } from 'react';
+import './ProductCart.css'; 
 
 function ProductCart() {
     const [cart, setCart] = useState([
@@ -60,6 +60,7 @@ function ProductCart() {
             </div>
             <div className='Cart'>
                 <h1>Cart</h1>
+                {addedCart.length === 0 ? <p>No Product added to the cart</p> : null}
                 {addedCart.map((item, index) => {
                     return (
                         <div key={index}>
